@@ -4,7 +4,23 @@ using System.Text;
 
 namespace Accounts
 {
-    internal class BankAccounts
+    public class BankAccount
     {
+        public string Owner { get; set; }
+        public Guid AccountNumber { get; set; }
+        public decimal Balance { get; set; }
+
+        // BankAccount constructor
+
+        public BankAccount(string owner)
+        {
+            Owner = owner;
+            AccountNumber = Guid.NewGuid();
+            Balance = 0;
+
+        }
+
     }
+
+
 }
