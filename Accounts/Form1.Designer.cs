@@ -68,6 +68,7 @@
             CreateAccountBtn.TabIndex = 2;
             CreateAccountBtn.Text = "Create Account";
             CreateAccountBtn.UseVisualStyleBackColor = false;
+            CreateAccountBtn.Click += CreateAccountBtn_Click;
             // 
             // numericUpDown1
             // 
