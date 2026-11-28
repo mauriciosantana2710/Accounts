@@ -37,6 +37,24 @@ namespace Accounts
 
         }
 
+        private void DepositBtn_Click(object sender, EventArgs e)
+        {
+            if (BankAccountsGrid.CurrentRow == null) return;
+            BankAccount account = (BankAccount)BankAccountsGrid.CurrentRow.DataBoundItem;
+            decimal amount = numericUpDown1.Value;
+            
+            try
+            {
+                account.Deposit(amount);
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+            RefreshGrid();
+        }
+
        
     }
 }

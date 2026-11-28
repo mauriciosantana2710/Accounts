@@ -107,6 +107,7 @@
             DepositBtn.TabIndex = 6;
             DepositBtn.Text = "Deposit";
             DepositBtn.UseVisualStyleBackColor = false;
+            DepositBtn.Click += DepositBtn_Click;
             // 
             // WithdrawBtn
             // 

@@ -19,6 +19,33 @@ namespace Accounts
             Balance = 0;
 
         }
+        public void Deposit(decimal amount)
+        {
+            if (amount <= 0)
+            {
+                throw new ArgumentException("Deposit amount must be greater than zero.");
+            }
+            
+            Balance += amount;
+        }
+
+        public bool Withdraw(decimal amount)
+        {
+            if (amount <= 0)
+            {
+                throw new ArgumentException("Withdraw amount must be greater than zero.");
+            }
+
+            if (amount > Balance)
+            {
+                return false;
+            }
+
+            Balance -= amount;
+            return true;
+
+
+        }
 
     }
 
